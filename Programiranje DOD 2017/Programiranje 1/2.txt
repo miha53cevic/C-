@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int M, N;
+	cin >> M;
+	N = 45 - M;
+
+	cout << N;
+
+	return 0;
+}

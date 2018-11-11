@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+// zadatak Tehle
+
+int main() {
+	do {
+		string broj;
+		cin >> broj;
+		for (int i = 0; i < broj.size(); i++) {
+			if ((broj[i] == 'A') || (broj[i] == 'B') || (broj[i] == 'C'))
+				broj[i] = '2';
+
+			else if ((broj[i] == 'D') || (broj[i] == 'E') || (broj[i] == 'F'))
+				broj[i] = '3';
+
+			else if ((broj[i] == 'G') || (broj[i] == 'H') || (broj[i] == 'I'))
+				broj[i] = '4';
+
+			else if ((broj[i] == 'J') || (broj[i] == 'K') || (broj[i] == 'L'))
+				broj[i] = '5';
+
+			else if ((broj[i] == 'M') || (broj[i] == 'N') || (broj[i] == 'O'))
+				broj[i] = '6';
+
+			else if ((broj[i] == 'P') || (broj[i] == 'Q') || (broj[i] == 'R' || (broj[i] == 'S')))
+				broj[i] = '7';
+
+			else if ((broj[i] == 'T') || (broj[i] == 'U') || (broj[i] == 'V'))
+				broj[i] = '8';
+
+			else if ((broj[i] == 'W') || (broj[i] == 'X') || (broj[i] == 'Y' || (broj[i] == 'Z')))
+				broj[i] = '9';
+		}
+		cout << broj << endl;
+	} while (1);
+		  return 0;
+}

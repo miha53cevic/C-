@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+//program raèuna koliko životinja Ivica nije vidio
+
+int main() {
+	int U, L, O, B;
+	//U je ukupan broj oèiju
+	cout << "unesite ukupan broj ociju ";
+	    cin >> U; 
+		cin >> L;
+		cin >> O;
+	B = (U - L * 2 - O) / 2;
+	cout << B;
+
+
+
+	return 0;
+}

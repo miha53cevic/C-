@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int izvucenibrojevi[6];
+	int jokeri[3][6];
+	int joker[6];
+	int broj;
+
+	for (int i = 0; i < 6; i++)
+	{
+		cin >> izvucenibrojevi[i];
+		if (izvucenibrojevi[i] < 10)
+			joker[i] = izvucenibrojevi[i];
+		else //ako je dvoznamenkasti
+			joker[i] = izvucenibrojevi[i] % 10;
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		cin >> broj;
+		jokeri[i][0] = broj / 100000;
+		jokeri[i][1] = (broj - jokeri[i][0] * 100000) / 10000;
+		jokeri[i][2] = (broj - jokeri[i][0] * 100000
+			- jokeri[i][1] * 10000) / 1000;
+		jokeri[i][3] = (broj - jokeri[i][0] * 100000
+			- jokeri[i][1] * 10000 - jokeri[i][2] * 1000) / 100;
+		jokeri[i][4] = (broj - jokeri[i][0] * 100000
+			- jokeri[i][1] * 10000 - jokeri[i][2] * 1000
+			- jokeri[i][3] * 100) / 10;
+		jokeri[i][5] = broj - jokeri[i][0] * 100000
+			- jokeri[i][1] * 10000 - jokeri[i][2] * 1000
+			- jokeri[i][3] * 100 - jokeri[i][4] * 10;
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		if  (jokeri[i][0] == joker[0] && jokeri[i][1] == joker[1] &&
+			 jokeri[i][2] == joker[2] && jokeri[i][3] == joker[3] &&
+			 jokeri[i][4] == joker[4] && jokeri[i][5] == joker[5])
+			 cout << "I.vrsta";
+
+		else if (jokeri[i][1] == joker[1] &&
+			     jokeri[i][2] == joker[2] && jokeri[i][3] == joker[3] &&
+			     jokeri[i][4] == joker[4] && jokeri[i][5] == joker[5])
+			     cout << "II.vrsta";
+
+		else if (
+			     jokeri[i][2] == joker[2] && jokeri[i][3] == joker[3] &&
+			     jokeri[i][4] == joker[4] && jokeri[i][5] == joker[5])
+			     cout << "III.vrsta";
+
+		else if (jokeri[i][3] == joker[3] &&
+			     jokeri[i][4] == joker[4] && jokeri[i][5] == joker[5])
+			     cout << "IV.vrsta";
+
+		else if (
+			     jokeri[i][4] == joker[4] && jokeri[i][5] == joker[5])
+			     cout << "V.vrsta";
+
+		else cout << "Nedobitan";
+		
+
+		
+		/*switch (istih)
+		{
+		case 0:
+			cout << "Nedobitan"; break;
+		case 2:
+			cout << "V.vrsta"; break;
+		case 3:
+			cout << "IV.vrsta"; break;
+		case 4:
+			cout << "III.vrsta"; break;
+		case 5:
+			cout << "II.vrsta"; break;
+		case 6:
+			cout << "I.vrsta"; break;
+		}*/
+ 
+		cout << endl;
+	}
+
+	
+	return 0;
+}

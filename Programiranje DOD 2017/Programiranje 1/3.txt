@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N, S, K, R, L;
+	cin >> N;
+	cin >> S;
+	cin >> K;
+
+	if (K == 2)
+	{
+		R = N - S*K;
+		if (R == 11)
+			R = N;
+	}
+	else if (S*K > N)
+		R = N;
+	else
+		R = N;
+
+	if (R > 0 && R!=N)
+	{
+		cout << "Dobro ";
+	}
+	else if (R == N && K != 2)
+	{
+		cout << "Lose ";
+	}
+	else
+		cout << "Odlicno ";
+
+
+	return 0;
+}

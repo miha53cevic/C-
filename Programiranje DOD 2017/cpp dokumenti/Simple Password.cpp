@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+	
+	string n;
+	string pass = "miha";
+	
+	cout << "Enter the password ";
+	cin >> n;
+	
+	if (n == pass) {
+	 cout << "Password Correct!";
+}
+	else
+	 cout << "Password Incorrect!";
+}

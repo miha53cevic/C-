@@ -1,0 +1,44 @@
+
+#include <iostream>
+#include <cstdlib>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+	vector<int>::iterator desno;
+	vector<int>::iterator lijevo;
+	vector<int>::iterator gore;
+	vector<int>::iterator dolje;
+	int n, mini=99999999;
+	cin >> n;
+	vector<int>x;
+	vector<int>y;
+	for (int i=0; i<n; i++){
+		int a, b;
+		cin >> a >> b;
+		x.push_back(a);
+		y.push_back(b);
+	}
+	//sort(x.begin(), x.end());
+	//sort(y.begin(), y.end());
+	lijevo=min_element(x.begin(), x.end());
+	desno=max_element(x.begin(), x.end());
+	gore=max_element(y.begin(), y.end());
+	dolje=min_element(y.begin(), y.end());
+	cout << "gore " << *gore << endl;
+	cout << "desno " << *desno << endl;
+	cout << "dolje " << *dolje << endl;
+	cout << "lijevo " << *lijevo << endl;
+	if ((*gore-*dolje) < (*desno-*lijevo)){
+		cout << (*desno-*lijevo)*(*desno-*lijevo) << endl;
+	}
+	else
+	{
+		cout << (*gore-*dolje)*(*gore-*dolje) << endl;
+	}
+	
+	//mini = max(((x[n-1]-x[0])*(x[n-1]-x[0])),  ((y[n-1]-y[0])*(y[n-1]-y[0])));
+	//cout << mini << endl;
+}

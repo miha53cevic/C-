@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+// zadatak OBRNI, ulazni 103 izlazni 301
+int okreni(int);
+
+int main() {
+
+	int N;
+	cin >> N;
+	int okrenuti_broj = okreni(N);
+	cout << okrenuti_broj;
+
+	return 0;
+}
+int broj_znamenaka(int x)
+{
+	if (x >= 10000) return 5;
+	else if (x >= 1000) return 4;
+	else if (x >= 100) return 3;
+	else if (x >= 10) return 2;
+	return 1;
+}
+
+int okreni(int x)
+{
+	int z, obroj= 0;
+	int bz = broj_znamenaka(x);
+	for (int i = bz; i >= 1;i--)
+	{
+		z = x / pow(10, i-1);
+		obroj = obroj + z*(pow(10, bz - i));
+		x = x - z *pow(10, i-1);
+	}
+	return obroj;
+}

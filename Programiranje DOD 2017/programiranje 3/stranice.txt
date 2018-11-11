@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+// zadatak STRANICE, ukupan broj znamenke treba saznati broj stranica pr. 19 - 14, 192 - 100 
+
+int main() {
+
+	int Z, brojac = 0, br = 0;
+	cin >> Z;
+
+	while (br != Z) {
+		brojac++;
+
+		if (brojac <= 9) {
+			br++;
+		}
+		else if (brojac <= 99) {
+			br = br + 2;
+		}
+		else if (brojac <= 999) {
+			br = br + 3;
+		}
+		else if (brojac <= 9999) {
+			br = br + 4;
+		}
+		else if (brojac <= 99999) {
+			br = br + 5;
+		}
+		else if (brojac <= 999999) {
+			br = br + 6;
+		}
+		else if (brojac <= 9999999) {
+			br = br + 6;
+		}
+	}
+		cout << brojac;
+	
+}

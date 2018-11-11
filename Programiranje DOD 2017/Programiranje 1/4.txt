@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int R, S, G, M, P,g;
+	cin >> R; 
+	cin >> S; 
+	cin >> G; 
+	cin >> M;
+	
+	P = R*S;
+	g = G*P;
+
+	if (M > g)
+
+		cout << g;
+
+	else if (M <= g)
+
+		cout << 0;
+
+		
+
+
+
+
+
+
+
+
+	return 0;
+}

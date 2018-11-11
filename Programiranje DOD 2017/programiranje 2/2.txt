@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+//zadatak nepar
+
+int main() {
+
+	int p1, p2, p3, p4, crvena, plava, ne;
+	cin >> p1;
+	cin >> p2;
+	cin >> p3;
+	cin >> p4;
+	
+	crvena = 0;
+	plava = 0;
+	ne = 0;
+
+// % - mod = raèuna ostatak
+
+	if (((p1 + p2) % 2) == 1) {   // Ako je p1 + p2 paran broj ispisi ih ako nije napisi ne
+		crvena = 1;   
+	}
+	if (crvena == 0)
+	{
+		 ne = 1;
+	}
+
+	if (((p3 + p4) % 2) == 0) {   
+		plava = 1; 
+	
+	}
+	if (plava == 0)
+	{
+		ne = 1;
+	}
+
+	if (plava == crvena) {
+		ne = 0;
+		cout << p3 << " " << p4 << endl; // crvena kutija pozitivan broj
+		cout << p1 << " " << p2 << endl; // plava kutija negativan broj
+	}
+
+	if (ne == 1) {
+		cout << "NE " << endl;
+	}
+
+
+	return 0;
+}

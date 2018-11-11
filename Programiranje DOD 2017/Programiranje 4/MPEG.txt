@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+// zadatak MPEG
+
+struct par {
+	char naredba;
+	int broj;
+};
+
+int main() {
+
+	int n;
+	cin >> n;
+	int niz[20];
+	par red[20];
+	for (int i = 0; i < n; i++) {
+		cin >> red[i].naredba;
+		cin >> red[i].broj;
+	}
+	for (int i = 0; i < n; i++) {
+		if (red[i].naredba == 'I')
+			niz[i] = red[i].broj;
+
+		else if (red[i].naredba == 'P') {
+			niz[i] = red[i].broj + niz[i - 1];
+		}
+		else
+		{
+			niz[i] = red[i].broj + red[i + 1].broj;
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		cout << niz[i] << " ";
+	}
+	return 0;
+}

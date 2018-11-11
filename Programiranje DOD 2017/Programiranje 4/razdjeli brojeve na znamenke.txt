@@ -1,0 +1,2 @@
+// dobijes drugu znamenku broja
+n = n % 10

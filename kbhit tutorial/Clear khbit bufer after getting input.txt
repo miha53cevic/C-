@@ -1,0 +1,2 @@
+while (kbhit()) getch();         //clear buffer
+fflush (stdin) ;         // clear stdin's buffer
