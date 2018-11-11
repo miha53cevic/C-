@@ -1,0 +1,6 @@
+Znaci ako imas 60 fps onda bude key se gledal ako je kliknut 60 puta i pomaknul svaki put dok vidi da je tocno
+Ako imas 100 fps bude logicno vise put mogel provjeriti te bude zato se vise pomaknul kaj necemo.
+Ovo se rjesi tako da se gleda vrijeme izmedu frame-ova i pomnozi se sa koliko zelimo da se korisnik pomakne znaci delta time
+Ako znamo da ako je 100 fps onda je vrijeme izmedu svakog frame-a manje nego kod 60.
+Te zato ako tako pomnozimo se on u tih 100 frame-i bude pomical po manjim koracima nego kod 60 ali budu zavrsili skupa isto.
+Mihael

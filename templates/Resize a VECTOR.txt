@@ -1,0 +1,6 @@
+You don`t need a loop to resize a 2 dimensional vector (matrix). You can simply do the following one line resize() call:
+
+//vector<vector<int>> M;
+//int n = number of rows, m = number of columns;
+M.resize(n, vector<int>(m));
+Hope that helps!

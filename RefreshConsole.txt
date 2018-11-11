@@ -1,0 +1,14 @@
+//REMOVES CURSOR
+    	CONSOLE_CURSOR_INFO curInfo;
+	GetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &curInfo);
+	curInfo.bVisible = 0;
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &curInfo);
+
+//REFRESHES SCREEN WITHOUTH FLICKER
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    COORD pos;
+
+    pos.X = 0;
+    pos.Y = 0;
+    SetConsoleCursorPosition(hConsole, pos);

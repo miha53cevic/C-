@@ -1,0 +1,2 @@
+for (vector<int>::iterator it = x.begin() ; it != x.end(); ++it)
+	  cout << *it;

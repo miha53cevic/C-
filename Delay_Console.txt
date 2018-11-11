@@ -1,0 +1,4 @@
+// Frame Timing
+
+	auto t1 = chrono::system_clock::now();
+	while ((chrono::system_clock::now() - t1) < 200ms)

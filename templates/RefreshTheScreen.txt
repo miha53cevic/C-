@@ -1,0 +1,5 @@
+#include <windows.h>
+
+//sets the cursor on the begining of the screen
+COORD cur = {0, 0};
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cur);
